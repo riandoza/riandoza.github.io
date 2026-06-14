@@ -30,12 +30,12 @@ export const skillCategories: SkillCategory[] = [
   {
     title: 'Languages',
     icon: '📝',
-    skills: ['JavaScript', 'TypeScript', 'Python', 'PHP', 'HTML5', 'CSS3'],
+    skills: ['JavaScript', 'TypeScript', 'Python', 'PHP', 'Golang', 'HTML5', 'CSS3'],
   },
   {
     title: 'Frontend & Mobile',
     icon: '🎨',
-    skills: ['React', 'React Native', 'Next.js', 'TailwindCSS'],
+    skills: ['React', 'React Native', 'Next.js', 'AstroJS', 'TailwindCSS'],
   },
   {
     title: 'Backend & API',
@@ -103,7 +103,9 @@ export const socials: Social[] = [
   { label: 'GitHub', url: 'https://github.com/riandoza', icon: 'github' },
   { label: 'LinkedIn', url: 'https://linkedin.com/in/riandoza', icon: 'linkedin' },
   { label: 'Twitter', url: 'https://twitter.com/riandoza', icon: 'twitter' },
-  { label: 'Email', url: 'mailto:riandoza@example.com', icon: 'mail' },
+  { label: 'Instagram', url: 'https://www.instagram.com/andriandoza', icon: 'instagram' },
+  { label: 'Facebook', url: 'https://www.facebook.com/riandozaa/', icon: 'facebook' },
+  { label: 'Email', url: 'mailto:riandoza@gmail.com', icon: 'mail' },
 ];
 
 export const quote = {
