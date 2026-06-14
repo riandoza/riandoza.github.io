@@ -51,6 +51,21 @@ const structuredData = [
     },
     inLanguage: 'en',
   },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': `${canonical}#webpage`,
+    name: title,
+    description,
+    url: canonical,
+    isPartOf: {
+      '@id': `${Astro.site}#website`,
+    },
+    about: {
+      '@id': `${Astro.site}#person`,
+    },
+    inLanguage: 'en',
+  },
 ];
 ---
 

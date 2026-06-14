@@ -2,16 +2,16 @@
 import { profile } from '../data/portfolio';
 
 const links = [
-  { href: '#about', label: 'About' },
-  { href: '#skills', label: 'Skills' },
-  { href: '#projects', label: 'Projects' },
-  { href: '#contact', label: 'Contact' },
+  { href: '/#about', label: 'About' },
+  { href: '/#skills', label: 'Skills' },
+  { href: '/#projects', label: 'Projects' },
+  { href: '/#contact', label: 'Contact' },
 ];
 ---
 
 <header class="nav">
   <div class="container nav-inner">
-    <a href="#top" class="brand">
+    <a href="/#top" class="brand">
       <span class="brand-mark">{'</>'}</span>
       <span class="brand-name">{profile.name}</span>
     </a>
@@ -20,7 +20,7 @@ const links = [
       {links.map((l) => <a href={l.href}>{l.label}</a>)}
     </nav>
 
-    <a class="nav-cta" href="#contact">Get in touch</a>
+    <a class="nav-cta" href="/#contact">Get in touch</a>
 
     <button class="menu-btn" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -29,7 +29,7 @@ const links = [
 
   <nav class="mobile-menu" aria-label="Mobile">
     {links.map((l) => <a href={l.href}>{l.label}</a>)}
-    <a href="#contact" class="mobile-cta">Get in touch</a>
+    <a href="/#contact" class="mobile-cta">Get in touch</a>
   </nav>
 </header>
 

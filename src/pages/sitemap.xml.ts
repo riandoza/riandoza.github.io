@@ -6,6 +6,21 @@ const pages = [
     changefreq: 'monthly',
     priority: '1.0',
   },
+  {
+    path: '/privacy-policy/',
+    changefreq: 'yearly',
+    priority: '0.3',
+  },
+  {
+    path: '/terms-of-use/',
+    changefreq: 'yearly',
+    priority: '0.3',
+  },
+  {
+    path: '/cookie-policy/',
+    changefreq: 'yearly',
+    priority: '0.3',
+  },
 ];
 
 export const GET: APIRoute = ({ site }) => {

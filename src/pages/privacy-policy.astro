@@ -1,0 +1,79 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+const title = 'Privacy Policy — Riandoza';
+const description =
+  'Privacy Policy for Riandoza, covering contact data, analytics, external links, cookies, and user privacy rights.';
+const updatedAt = 'June 15, 2026';
+---
+
+<Layout title={title} description={description}>
+  <Nav />
+  <main class="legal-page">
+    <article class="container legal-content">
+      <p class="eyebrow">Legal</p>
+      <h1>Privacy Policy</h1>
+      <p class="legal-updated">Last updated: {updatedAt}</p>
+
+      <p>
+        This Privacy Policy explains how Riandoza handles information when you
+        visit this website or contact me through the links provided here.
+      </p>
+
+      <h2>Information I Collect</h2>
+      <p>
+        This website does not require account registration and does not ask you
+        to submit personal information through an on-site form. If you contact
+        me by email or through a third-party social platform, I may receive the
+        information you choose to send, such as your name, email address, social
+        profile, project details, and message content.
+      </p>
+
+      <h2>How I Use Information</h2>
+      <p>
+        I use contact information only to respond to messages, discuss possible
+        work, collaborate on projects, provide requested information, and keep a
+        record of relevant communication.
+      </p>
+
+      <h2>Cookies and Analytics</h2>
+      <p>
+        This site does not currently set first-party analytics or advertising
+        cookies. Third-party services linked from this site, such as GitHub,
+        LinkedIn, Instagram, Facebook, or X/Twitter, may use their own cookies
+        and tracking technologies under their own policies.
+      </p>
+
+      <h2>Sharing Information</h2>
+      <p>
+        I do not sell personal information. I may share information only when it
+        is necessary to respond to your request, comply with legal obligations,
+        protect rights and security, or work with service providers that support
+        basic website hosting and communication.
+      </p>
+
+      <h2>Data Retention</h2>
+      <p>
+        I keep communication records only as long as reasonably needed for the
+        purpose of the conversation, project follow-up, legal compliance, or
+        legitimate business records.
+      </p>
+
+      <h2>Your Choices</h2>
+      <p>
+        You may ask me to update or delete personal information you have sent to
+        me, subject to any legal or legitimate business need to retain certain
+        records.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        For privacy questions, contact me at
+        <a href="mailto:riandoza@gmail.com">riandoza@gmail.com</a>.
+      </p>
+    </article>
+  </main>
+  <Footer />
+</Layout>

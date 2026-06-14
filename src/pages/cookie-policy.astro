@@ -1,0 +1,68 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+const title = 'Cookie Policy — Riandoza';
+const description =
+  'Cookie Policy for Riandoza, explaining current cookie usage, third-party links, and browser controls.';
+const updatedAt = 'June 15, 2026';
+---
+
+<Layout title={title} description={description}>
+  <Nav />
+  <main class="legal-page">
+    <article class="container legal-content">
+      <p class="eyebrow">Legal</p>
+      <h1>Cookie Policy</h1>
+      <p class="legal-updated">Last updated: {updatedAt}</p>
+
+      <p>
+        This Cookie Policy explains how cookies and similar technologies may be
+        used when you visit this website.
+      </p>
+
+      <h2>What Cookies Are</h2>
+      <p>
+        Cookies are small text files stored by your browser. They can help a
+        website remember preferences, support security, measure traffic, or
+        provide embedded third-party functionality.
+      </p>
+
+      <h2>Cookies Used by This Website</h2>
+      <p>
+        This website does not currently set first-party analytics, advertising,
+        or preference cookies. It is a static portfolio website hosted on GitHub
+        Pages.
+      </p>
+
+      <h2>Third-Party Services</h2>
+      <p>
+        This website includes links to third-party services such as GitHub,
+        LinkedIn, Instagram, Facebook, and X/Twitter. If you open those links,
+        those services may set cookies or use similar technologies according to
+        their own cookie and privacy policies.
+      </p>
+
+      <h2>Managing Cookies</h2>
+      <p>
+        You can control or delete cookies through your browser settings. Blocking
+        some cookies may affect how third-party websites work after you leave
+        this site.
+      </p>
+
+      <h2>Changes to This Policy</h2>
+      <p>
+        I may update this Cookie Policy when the website changes or when cookie
+        practices change.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        For cookie questions, contact
+        <a href="mailto:riandoza@gmail.com">riandoza@gmail.com</a>.
+      </p>
+    </article>
+  </main>
+  <Footer />
+</Layout>
