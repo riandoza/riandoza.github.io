@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css';
-import { profile } from '../data/portfolio';
+import { profile, skillCategories, socials } from '../data/portfolio';
 
 interface Props {
   title?: string;
@@ -17,6 +17,41 @@ const basePath = import.meta.env.BASE_URL.endsWith('/')
   ? import.meta.env.BASE_URL
   : `${import.meta.env.BASE_URL}/`;
 const favicon = `${basePath}favicon.svg`;
+const email = socials.find((social) => social.icon === 'mail')?.url.replace('mailto:', '');
+const sameAs = socials
+  .filter((social) => !social.url.startsWith('mailto:'))
+  .map((social) => social.url);
+const knowsAbout = skillCategories.flatMap((category) => category.skills);
+const structuredData = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    '@id': `${Astro.site}#person`,
+    name: profile.name,
+    jobTitle: profile.role,
+    description,
+    email,
+    url: Astro.site?.toString(),
+    sameAs,
+    knowsAbout,
+    homeLocation: {
+      '@type': 'Place',
+      name: profile.location,
+    },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': `${Astro.site}#website`,
+    name: profile.name,
+    description,
+    url: Astro.site?.toString(),
+    publisher: {
+      '@id': `${Astro.site}#person`,
+    },
+    inLanguage: 'en',
+  },
+];
 ---
 
 <!doctype html>
@@ -43,6 +78,7 @@ const favicon = `${basePath}favicon.svg`;
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
