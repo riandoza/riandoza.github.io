@@ -5,20 +5,35 @@ export const profile = {
   role: 'Full-Stack Developer & DevOps Engineer',
   location: 'Indonesia',
   taglines: [
-    'Full-Stack Developer from Indonesia',
-    'Passionate about Software & IoT',
-    'Always learning new technologies',
+    'Full-Stack Developer',
+    'DevOps Engineer',
+    'IoT & Cloud Enthusiast',
   ],
+  // Short, punchy line shown right under the name in the hero.
+  tagline:
+    'I design, build, and ship reliable web applications — from a polished frontend all the way down to the servers they run on.',
+  // Longer, friendly paragraph used on the About section and meta description.
   summary:
-    "I'm a passionate Full-Stack Developer and DevOps Engineer from Indonesia, currently working as a Freelancer. I love building scalable applications and managing robust server infrastructures.",
+    "Hi! I'm a full-stack developer and DevOps engineer based in Indonesia, working with founders and teams as a freelancer. I love turning ideas into scalable products and keeping the infrastructure behind them fast, secure, and dependable.",
   highlights: [
-    { icon: '🔭', label: 'Currently', text: 'Freelance full-stack development & DevOps solutions' },
-    { icon: '👀', label: 'Interested in', text: 'Software Development, IoT, AI/ML, and Cloud Technologies' },
-    { icon: '👯', label: 'Collaborate on', text: 'Open source, DevOps automation, system administration' },
-    { icon: '💬', label: 'Ask me about', text: 'Ubuntu/CentOS/Debian, Docker, full-stack development' },
-    { icon: '⚡', label: 'Fun fact', text: 'I enjoy optimizing server performance & exploring new tech stacks' },
+    { icon: '🔭', label: 'Right now', text: 'Helping clients ship full-stack products and automate their DevOps' },
+    { icon: '👀', label: 'Excited about', text: 'Web development, IoT, AI/ML, and cloud-native technologies' },
+    { icon: '🤝', label: 'Happy to help with', text: 'Open source, DevOps automation, and system administration' },
+    { icon: '💬', label: 'Ask me about', text: 'Linux servers (Ubuntu/Debian), Docker, and full-stack development' },
+    { icon: '⚡', label: 'Fun fact', text: 'I genuinely enjoy squeezing every last bit of performance out of a server' },
   ],
 };
+
+export type Stat = {
+  value: string;
+  label: string;
+};
+
+export const stats: Stat[] = [
+  { value: '10+', label: 'Years of experience' },
+  { value: '50+', label: 'Projects delivered' },
+  { value: '20+', label: 'Technologies mastered' },
+];
 
 export type SkillCategory = {
   title: string;
@@ -80,14 +95,14 @@ export const projects: Project[] = [
   {
     name: 'frankenphp-laravel',
     description:
-      'A Laravel setup powered by FrankenPHP — a modern, high-performance application server for PHP, bringing standalone binaries and worker mode to Laravel apps.',
+      'A production-ready Laravel starter powered by FrankenPHP, the modern high-performance PHP server. Ships as a single standalone binary with worker mode for blazing-fast requests.',
     tags: ['PHP', 'Laravel', 'FrankenPHP', 'Docker'],
     url: 'https://github.com/riandoza/frankenphp-laravel',
   },
   {
-    name: 'More on GitHub',
+    name: 'Explore more on GitHub',
     description:
-      'Explore the rest of my open-source work, experiments, and infrastructure tooling on my GitHub profile.',
+      'There’s plenty more where this came from — open-source experiments, infrastructure tooling, and the projects I tinker with in my spare time.',
     tags: ['Open Source', 'DevOps', 'Full-Stack'],
     url: 'https://github.com/riandoza',
   },
