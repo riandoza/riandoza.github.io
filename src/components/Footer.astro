@@ -1,5 +1,8 @@
 ---
 import { profile } from '../data/portfolio';
+import { getCurrentYearInSiteTimeZone } from '../data/site';
+
+const currentYear = getCurrentYearInSiteTimeZone();
 
 const footerLinks = [
   { href: '/privacy-policy/', label: 'Privacy Policy' },
@@ -12,7 +15,7 @@ const footerLinks = [
 <footer class="footer">
   <div class="container footer-inner">
     <span class="footer-copyright"
-      >© {new Date().getFullYear()} {profile.name}. Built with Astro.</span
+      >© {currentYear} {profile.name}. Built with Astro.</span
     >
     <nav class="footer-links" aria-label="Footer">
       {footerLinks.map((link) => <a href={link.href}>{link.label}</a>)}

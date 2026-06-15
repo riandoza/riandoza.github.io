@@ -2,11 +2,12 @@
 import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import { LEGAL_LAST_UPDATED, formatSiteDate } from '../data/site';
 
 const title = 'Terms of Use — Riandoza';
 const description =
   'Terms of Use for Riandoza, covering acceptable use, content ownership, external links, disclaimers, and limitations.';
-const updatedAt = 'June 15, 2026';
+const updatedAt = formatSiteDate(LEGAL_LAST_UPDATED);
 ---
 
 <Layout title={title} description={description}>

@@ -1,4 +1,5 @@
 import type { APIRoute } from 'astro';
+import { SITE_LAST_MODIFIED } from '../data/site';
 
 const pages = [
   {
@@ -24,7 +25,6 @@ const pages = [
 ];
 
 export const GET: APIRoute = ({ site }) => {
-  const lastmod = new Date().toISOString();
   const urls = pages
     .map(({ path, changefreq, priority }) => {
       const loc = new URL(path, site).toString();
@@ -32,7 +32,7 @@ export const GET: APIRoute = ({ site }) => {
       return [
         '  <url>',
         `    <loc>${loc}</loc>`,
-        `    <lastmod>${lastmod}</lastmod>`,
+        `    <lastmod>${SITE_LAST_MODIFIED}</lastmod>`,
         `    <changefreq>${changefreq}</changefreq>`,
         `    <priority>${priority}</priority>`,
         '  </url>',
