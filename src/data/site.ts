@@ -1,5 +1,5 @@
 export const SITE_TIME_ZONE = 'Asia/Jakarta';
-export const SITE_LAST_MODIFIED = '2026-06-16';
+export const SITE_LAST_MODIFIED = '2026-06-16T00:00:00+07:00';
 export const LEGAL_LAST_UPDATED = '2026-06-16';
 
 export function getCurrentYearInSiteTimeZone() {
